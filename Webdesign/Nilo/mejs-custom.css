@@ -1,0 +1,40 @@
+.custom-player {
+	background-color: #cbe1d4;
+	margin: 0.5em auto;
+	box-shadow: 2px 2px 5px #888888;
+	max-width: 100% !important;
+	z-index: 0;
+}
+
+@media (max-width: 768px) {				/* Cancel audio player default inline style width 400px on small devices */
+
+.audio_content {
+	margin-top: 2em;
+}
+
+
+#mep_0 {					
+	width: 80% !important;
+}
+
+#mep_1 {
+	width: 80% !important;
+}
+
+#mep_2 {
+	width: 80% !important;
+}
+
+#mep_3 {
+	width: 80% !important;
+}
+
+#mep_4 {
+	width: 80% !important;
+}
+
+#mep_5 {
+	width: 80% !important;
+}
+
+}

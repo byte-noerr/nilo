@@ -1,0 +1,549 @@
+/* Global */
+
+
+.english {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.japanese {
+	font-family: 'Meiryo', 'MS PGothic', 'Hiragino Kaku Gothic Pro', 'Osaka', sans-serif;
+}
+
+h1 {
+	color: white;
+	background-color: #cbe1d4;
+	padding: 0.2em 0.2em;
+}
+
+h4 {
+	color: white;
+	background-color: #cbe1d4;
+	padding: 0.2em 0;
+}
+
+h1 a {
+	text-decoration: none;
+	color: white;
+} 
+
+a:hover {										/* Cancel Bootstrap default hover link behavior */
+	text-decoration: none;
+	color: white;
+}
+
+a {
+	color: white;
+}
+
+.center_h1 {
+	display: flex;
+	justify-content: center;
+}
+
+.flag {
+	width: 30px;
+	height: 15px
+}
+
+
+/* Invisible container that pushes anchor below navigation */
+
+.offset {									
+	display: block;
+	content: "";
+	height: 108px;
+	margin-top: -108px;
+	visibility: hidden;
+}
+
+/* Adjust invisible container height to bigger header */
+
+@media (max-width: 992px){
+	.offset {									
+		display: block;
+		content: "";
+		height: 165px;
+		margin-top: -165px;
+		visibility: hidden;
+	}
+}
+
+@media (max-width: 768px) {
+	.offset {									
+		display: block;
+		content: "";
+		height: 245px;
+		margin-top: -245px;
+		visibility: hidden;
+	}
+}
+
+@media (max-width: 568px) {
+	.offset {									
+		display: block;
+		content: "";
+		height: 135px;
+		margin-top: -135px;
+		visibility: hidden;
+	}
+}
+
+/* Navigation */
+
+.fixed {
+	position: fixed;
+	width: 100%;
+	z-index: 1;									/* Content does not overlap header */
+}
+
+.header-background {
+	background-color: #629260;
+	display: flex;								/*Warum wendet Browser margin: 0 auto erst auf den genesteten Container an, wenn ich das Parent auf flex stelle?*/	
+	box-shadow: 5px 5px 15px #888888;
+}
+
+.content-navigation {
+	margin: 0 auto;
+}
+
+.logo {
+	margin: 2em 0;
+}
+
+.main-navigation {
+	margin: 2.9em 0;
+	text-align: center;
+}
+
+.main-navigation ul	{
+	display: flex;
+	justify-content: flex-end;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.main-navigation li {
+	margin: 0 0.7em;
+}
+
+.main-navigation a	{
+	display: block;
+	text-decoration: none;
+	color: white;
+	font-size: 1.5em;
+}
+
+.main-navigation a:hover {
+	color: #80c598;
+}
+
+.shadow {
+	text-shadow: 2px 2px 5px #3e5d3c;
+}
+
+.fixed-image {
+	background-image: url("./pictures/profile_highres.jpg");
+	height: 1080px;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover; 
+}
+
+
+/* Concerts */
+
+.content-events {
+	display: flex;
+	background-color: #dfe6de;
+	height: auto;
+}
+
+.center-events {
+	margin: 0 auto;
+}
+
+.event-card {
+	height: 20.5em;					/* Cards have a fixed height and stack */
+}
+
+/* Music */
+
+.music-background {
+	background-color: #dfe6de;
+	display: flex;
+}
+
+.center-music {
+	margin: 0 auto;
+}
+
+.video-content {
+	display: flex;
+}
+
+iframe {
+	margin-top: 1em;
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 2px 2px 5px #888888;
+}
+
+
+.album_cover {
+	margin-top: 1em;
+	box-shadow: 2px 2px 5px #888888;
+}
+
+.audio_content {
+	margin-top: 1em;
+	text-align: center;
+}
+
+audio {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	width: 90%;
+	box-shadow: 2px 2px 5px #888888;
+}
+
+/* Photo Gallery*/
+
+.content-gallery {
+	display: flex;
+	background-color: #dfe6de;
+}
+
+.center-gallery {
+	margin: 0 auto;
+}
+
+.gallery-card {
+	height: 20em;
+	margin: 1em 0;
+	padding: 1%;
+	background-color: white;
+	box-shadow: 2px 2px 5px #888888;
+	
+}
+
+/* Contact Form */
+
+.content-contact {
+	display: flex;
+	background-color: #dfe6de;
+	padding-bottom: 5em;
+}
+
+.center-contact {
+	margin: 0 auto;
+}
+
+input {
+	box-shadow: 2px 2px 5px #888888;
+	border: none;
+	width: 100%;									/* Input-Field is as wide as the form-element */
+	margin-bottom: 0.5em;
+}
+
+input:focus {
+	outline:none;									/* Remove blue glow around input field */
+}
+
+textarea {
+	box-shadow: 2px 2px 5px #888888;
+	border: none;
+	width: 100%;
+	height: 10em;
+}
+
+textarea:focus {
+	outline:none;
+}
+
+.form-element {
+	margin-left: 25%;							
+	margin-right: 25%;
+}
+
+/* Footer */
+
+.footer {
+	display: flex;
+	background-color: #629260;
+	color: white;
+}
+
+.footer p {
+	margin: 1% 0;
+	margin-right: 1%;
+}
+
+.footer a:hover {
+	color: #80c598;
+}
+
+.center-footer {
+	margin: 0 auto;
+}
+
+.social-icons-margin {
+	margin: 0.1em 0.1em;
+}
+
+.content-footer {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.copyright {
+	background-color: #629260;
+	justify-content: flex-end;
+}
+
+
+/* CSS for Javascript/Jquery */
+
+/* Lightbox  */
+
+.overlay {
+	background: rgba(0,0,0,0.8);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 2;
+	text-align: center;
+}
+
+.overlay:before {					/* Ghost/Pseudo-container that is used to vertically center the image */
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.overlay img {
+	max-height: 100%;				/* Responsive to Browser height */
+	max-width: 100%;				/*Responsive to Browser width*/
+	display: inline-block;
+	vertical-align: middle;
+	
+									
+}
+
+/*CSS for mobile devices*/
+
+@media (min-width: 992px) {
+	
+	.audio_content {
+		height: 27em;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+	}
+	
+	audio {
+		width: 70%;
+	}
+	
+	.album_cover {
+	margin-top: 1em;
+	width: 27em;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 2px 2px 5px #888888;
+	}
+	
+	.menu {
+		display: none;
+	}
+	
+	.flag-margin {
+		margin-bottom: 0.1em;
+	}
+}
+
+@media (max-width: 1200px) {			/* Large devices */
+
+/* Navigation */
+
+.logo {
+	display: flex;
+	margin: 1.5em 0;
+}
+
+.logo img {
+	margin: 0 auto;
+}
+
+.main-navigation  {
+	display: flex;
+	margin: 1.5em 0;
+}
+
+.main-navigation ul {
+	margin: 0 auto;
+}
+
+
+@media (max-width: 992px) {			/* Medium devices */
+	
+/* Navigation */
+	
+.logo {
+	display: flex;
+	margin: 1.5em 0;
+}
+
+.logo img {
+	margin: 0 auto;
+}
+
+.main-navigation  {
+	display: flex;
+	margin: 1.5em 0;
+}
+
+.main-navigation ul {
+	margin: 0 auto;
+}
+
+/* Events */
+
+
+/*Lightbox*/
+
+.overlay img {
+	max-width: 100%;
+}
+
+/* Contact Form */
+
+.form-element {
+	margin-left: 0;							
+	margin-right: 0;
+}
+
+@media (max-width: 768px) {			/* Small devices */
+
+h1 {
+	text-align: center;
+}
+
+/* Navigation */
+
+.home {
+		display: none;
+	}
+
+.logo {
+	display: flex;
+	margin: 1.5em 0 0 0;
+}
+
+.logo img {
+	margin: 0 auto;
+}
+
+.main-navigation  {
+	display: flex;
+	margin: 1em 0;
+}
+
+.main-navigation ul {
+	margin: 0 auto;
+	flex-direction: column;
+}
+
+.main-navigation li {
+	margin: 0.2em  0;
+}
+
+/* Events */
+
+.event-card h4 {
+	text-align: center;
+}
+
+.content-events {
+	margin-top: 17em;
+}
+
+/*Lightbox*/
+
+.overlay img {
+	max-width: 100%;
+}
+
+/* Footer */
+
+.social-icons {
+	justify-content: center;
+}
+
+.copyright {
+	justify-content: center;
+}
+
+}
+
+@media (min-width: 375px) {									/* Extra small devices */
+	.break_japanese {
+		display: none;
+	}
+}
+
+/* Dropdown Menu */
+
+@media (max-width: 568px){									/* Small screens: hide home link */
+	.home {
+		display: none;
+	}
+	
+	.menu {
+		text-align: center;
+		margin-top: 1em;
+		color: white;
+	}
+	
+	.menu:hover {
+		color: #80c598;
+	}
+		
+	.main-navigation {
+		margin-top: 0;
+		height: 0;
+	}
+	
+	.open {
+		height: auto;
+	}
+	
+	.transparent {
+		display: none;
+	}
+	
+	.content-events {
+		margin-top: 9.5em;
+	}
+}	
+
+@media (min-width: 568px) {									/* Big screens: hide bar-icon */
+	.fa-bars {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {									/* Big screens: Center flag icons */
+	.flag-margin {
+		margin-bottom: 0.1em;
+	}
+}
