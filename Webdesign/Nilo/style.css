@@ -269,6 +269,11 @@ textarea:focus {
 	margin-right: 25%;
 }
 
+button {
+	color: white;
+	background-color: #cbe1d4;
+}
+
 /* Footer */
 
 .footer {
